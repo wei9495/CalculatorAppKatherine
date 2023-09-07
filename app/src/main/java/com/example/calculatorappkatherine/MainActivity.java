@@ -20,15 +20,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void divide(View V){
-        // Need a reference to the EditText in our xml
-        //need a String variable to hold the data that was in this EditText
-        //we need toString() after getText because the text in there is still editable
-        //this toString() allows us to get the current contents
-        //do this for each of our variables
-
-       // EditText nameET = findViewById(R.id.nameEditText);
-        //String name = nameET.getText().toString();
-
         EditText num1 = findViewById(R.id.editFirstNum);
         double firstNum = Integer.parseInt(num1.getText().toString());
 
@@ -37,37 +28,60 @@ public class MainActivity extends AppCompatActivity {
 
         double quotient = firstNum/secondNum;
 
-        //
-
-//        TextView infoAge= findViewById(R.id.infoAge);
-//        infoAge.setText(ageReceived);
-//
-//        EditText ageET = findViewById(R.id.ageEditText);
-//        String age = ageET.getText().toString();
-//
-//        EditText hobbyET = findViewById(R.id.hobbyEditText);
-//        String hobby = hobbyET.getText().toString();
-//
-//        //log statements allow us to print to the console for debugging
-//        String tag;
-//        Log.i( "denna", name + " " + age + " " + hobby);
-//
-//        String fullText = "hello my name is" + name + ", I am " + age + " years old\n\tI like" + hobby;
-//
-//        //create the intent and tell it where to go
-//        Intent intent = new Intent(this, ShowInfoActivity.class);
-//        //fill the intent
-//        intent.putExtra("FULLTEXT", fullText);
-//        //call startActivity to launch the intent which is mailing the package
-//        //startActivity(intent);
-//
-//        //create the intent and tell it where to go
-//
-//        //fill the intent
-//        intent.putExtra("NAME", name);
-//        //call startActivity to launch the intent which is mailing the package
-
+        TextView answer= findViewById(R.id.answer);
+        answer.setText(""+quotient+"");
     }
 
+    public void multiply(View V){
+        EditText num1 = findViewById(R.id.editFirstNum);
+        double firstNum = Integer.parseInt(num1.getText().toString());
+        EditText num2 = findViewById(R.id.editSecondNum);
+        double secondNum = Integer.parseInt(num2.getText().toString());
+        double product = firstNum*secondNum;
+        TextView answer= findViewById(R.id.answer);
+        answer.setText(""+product+"");
+    }
+
+    public void add(View V){
+        EditText num1 = findViewById(R.id.editFirstNum);
+        double firstNum = Integer.parseInt(num1.getText().toString());
+        EditText num2 = findViewById(R.id.editSecondNum);
+        double secondNum = Integer.parseInt(num2.getText().toString());
+        double sum = firstNum+secondNum;
+        TextView answer= findViewById(R.id.answer);
+        answer.setText(""+sum+"");
+    }
+
+    public void subtract(View V){
+        EditText num1 = findViewById(R.id.editFirstNum);
+        double firstNum = Integer.parseInt(num1.getText().toString());
+        EditText num2 = findViewById(R.id.editSecondNum);
+        double secondNum = Integer.parseInt(num2.getText().toString());
+        double difference = firstNum-secondNum;
+        TextView answer= findViewById(R.id.answer);
+        answer.setText(""+difference+"");
+    }
+
+    public void exponent(View V){
+
+        EditText num1 = findViewById(R.id.editFirstNum);
+        double firstNum = Integer.parseInt(num1.getText().toString());
+        EditText num2 = findViewById(R.id.editSecondNum);
+        double secondNum = Integer.parseInt(num2.getText().toString());
+        double exponent = Math.pow(firstNum,secondNum);
+        TextView answer= findViewById(R.id.answer);
+        answer.setText(""+exponent+"");
+    }
+
+    public void modulus(View V){
+
+        EditText num1 = findViewById(R.id.editFirstNum);
+        int firstNum = Integer.parseInt(num1.getText().toString());
+        EditText num2 = findViewById(R.id.editSecondNum);
+        int secondNum = Integer.parseInt(num2.getText().toString());
+        int mod = firstNum%secondNum;
+        TextView answer= findViewById(R.id.answer);
+        answer.setText(""+mod+"");
+    }
 
 }
