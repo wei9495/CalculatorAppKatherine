@@ -168,11 +168,11 @@ public class MainActivity extends AppCompatActivity {
             operation = EQUATION.indexOf("+");
             String firstNum = EQUATION.substring(0,operation);
             String secondNum = EQUATION.substring(operation+1);
-            int first = Integer.parseInt(firstNum.toString());
-            int second = Integer.parseInt(secondNum.toString());
+            int first = Integer.parseInt(firstNum);
+            int second = Integer.parseInt(secondNum);
             int ans = first + second;
             TextView answer= findViewById(R.id.answer);
-            answer.setText(ans);
+            answer.setText(ans + "");
         }
         if(EQUATION.indexOf("-")>-1){
             operation = EQUATION.indexOf("-");
