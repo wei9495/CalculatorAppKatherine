@@ -62,14 +62,14 @@
         android:id="@+id/buttonAdd"
         android:layout_width="@dimen/circle"
         android:layout_height="@dimen/circle"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="24dp"
         android:fontFamily="sans-serif-black"
         android:onClick="add"
         android:text="+"
 
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="275dp" />
+        tools:layout_editor_absoluteY="272dp" />
 
     <Button
         android:id="@+id/buttonZero"
@@ -115,7 +115,7 @@
         android:textColorLink="#13080C"
         android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/buttonAdd"
-        tools:layout_editor_absoluteY="273dp" />
+        app:layout_constraintTop_toBottomOf="@+id/answer" />
 
     <Button
         android:id="@+id/buttonDiv"

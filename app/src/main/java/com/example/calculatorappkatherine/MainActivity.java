@@ -181,11 +181,19 @@ public class MainActivity extends AppCompatActivity {
             operation = EQUATION.indexOf("+");
             String firstNum = EQUATION.substring(0,operation);
             String secondNum = EQUATION.substring(operation+1);
+<<<<<<< HEAD
             first = Integer.parseInt(firstNum.toString());
             second = Integer.parseInt(secondNum.toString());
             ans = first + second;
             TextView answer= findViewById(R.id.answer);
             answer.setText("=" +ans);
+=======
+            int first = Integer.parseInt(firstNum);
+            int second = Integer.parseInt(secondNum);
+            int ans = first + second;
+            TextView answer= findViewById(R.id.answer);
+            answer.setText(ans + "");
+>>>>>>> 029939066807067df40230b3b08a7bde4e0de1ee
         }
         if(EQUATION.indexOf("-")>-1){
             operation = EQUATION.indexOf("-");
