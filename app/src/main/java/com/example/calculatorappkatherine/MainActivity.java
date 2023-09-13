@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
             EQUATION +="";
         }
 
+        TextView update= findViewById(R.id.stringEquation);
+        update.setText(EQUATION);
     }
 
     public void multiply(View V){
@@ -60,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
         }else{
             EQUATION +="";
         }
+        TextView update= findViewById(R.id.stringEquation);
+        update.setText(EQUATION);
     }
 
     public void add(View V){
@@ -80,6 +84,8 @@ public class MainActivity extends AppCompatActivity {
         }else{
             EQUATION +="";
         }
+        TextView update= findViewById(R.id.stringEquation);
+        update.setText(EQUATION);
     }
 
     public void subtract(View V){
@@ -99,85 +105,117 @@ public class MainActivity extends AppCompatActivity {
         }else{
             EQUATION +="";
         }
+        TextView update= findViewById(R.id.stringEquation);
+        update.setText(EQUATION);
     }
 
-//    public void exponent(View V){
-//
-//        EditText num1 = findViewById(R.id.editFirstNum);
-//        double firstNum = Integer.parseInt(num1.getText().toString());
-//        EditText num2 = findViewById(R.id.editSecondNum);
-//        double secondNum = Integer.parseInt(num2.getText().toString());
-//        double exponent = Math.pow(firstNum,secondNum);
-//        TextView answer= findViewById(R.id.answer);
-//        answer.setText(""+exponent+"");
-//    }
-//
-//    public void modulus(View V){
-//
-//        EditText num1 = findViewById(R.id.editFirstNum);
-//        int firstNum = Integer.parseInt(num1.getText().toString());
-//        EditText num2 = findViewById(R.id.editSecondNum);
-//        int secondNum = Integer.parseInt(num2.getText().toString());
-//        int mod = firstNum%secondNum;
-//        TextView answer= findViewById(R.id.answer);
-//        answer.setText(""+mod+"");
-//    }
 
     public void stringOn1(View V){
         EQUATION += 1 + "";
+        TextView update= findViewById(R.id.stringEquation);
+        update.setText(EQUATION);
     }
 
     public void stringOn2(View V){
         EQUATION += 2 + "";
+        TextView update= findViewById(R.id.stringEquation);
+        update.setText(EQUATION);
     }
 
     public void stringOn3(View V){
         EQUATION += 3 + "";
+        TextView update= findViewById(R.id.stringEquation);
+        update.setText(EQUATION);
     }
 
     public void stringOn4(View V){
         EQUATION += 4 + "";
+        TextView update= findViewById(R.id.stringEquation);
+        update.setText(EQUATION);
     }
 
     public void stringOn5(View V){
         EQUATION += 5 + "";
+        TextView update= findViewById(R.id.stringEquation);
+        update.setText(EQUATION);
     }
     public void stringOn6(View V){
         EQUATION += 6 + "";
+        TextView update= findViewById(R.id.stringEquation);
+        update.setText(EQUATION);
     }
     public void stringOn7(View V){
         EQUATION += 7 + "";
+        TextView update= findViewById(R.id.stringEquation);
+        update.setText(EQUATION);
     }
 
     public void stringOn8(View V){
         EQUATION += 8 + "";
+        TextView update= findViewById(R.id.stringEquation);
+        update.setText(EQUATION);
     }
     public void stringOn9(View V){
         EQUATION += 9 + "";
+        TextView update= findViewById(R.id.stringEquation);
+        update.setText(EQUATION);
+        equals(V);
     }
     public void stringOn0(View V){
         EQUATION += 0 + "";
+        TextView update= findViewById(R.id.stringEquation);
+        update.setText(EQUATION);
     }
     public void stringClear(View V){
         EQUATION = "";
+        TextView update= findViewById(R.id.stringEquation);
+        update.setText(EQUATION);
     }
 
     public void equals(View V){
         int operation = -1;
+        double first;
+        double second;
+        double ans;
         if(EQUATION.indexOf("+")>-1){
             operation = EQUATION.indexOf("+");
             String firstNum = EQUATION.substring(0,operation);
             String secondNum = EQUATION.substring(operation+1);
-            int first = Integer.parseInt(firstNum.toString());
-            int second = Integer.parseInt(secondNum.toString());
-            int ans = first + second;
+            first = Integer.parseInt(firstNum.toString());
+            second = Integer.parseInt(secondNum.toString());
+            ans = first + second;
             TextView answer= findViewById(R.id.answer);
-            answer.setText(ans);
+            answer.setText("=" +ans);
         }
         if(EQUATION.indexOf("-")>-1){
             operation = EQUATION.indexOf("-");
             String firstNum = EQUATION.substring(0,operation);
             String secondNum = EQUATION.substring(operation+1);
+            first = Integer.parseInt(firstNum.toString());
+            second = Integer.parseInt(secondNum.toString());
+            ans = first - second;
+            TextView answer= findViewById(R.id.answer);
+            answer.setText("=" +ans);
+        }
+        if(EQUATION.indexOf("*")>-1){
+            operation = EQUATION.indexOf("*");
+            String firstNum = EQUATION.substring(0,operation);
+            String secondNum = EQUATION.substring(operation+1);
+            first = Integer.parseInt(firstNum.toString());
+            second = Integer.parseInt(secondNum.toString());
+            ans = first * second;
+            TextView answer= findViewById(R.id.answer);
+            answer.setText("=" +ans);
+        }
+        if(EQUATION.indexOf("/")>-1){
+            operation = EQUATION.indexOf("/");
+            String firstNum = EQUATION.substring(0,operation);
+            String secondNum = EQUATION.substring(operation+1);
+            first = Integer.parseInt(firstNum.toString());
+            second = Integer.parseInt(secondNum.toString());
+            ans = first/second;
+            TextView answer= findViewById(R.id.answer);
+            answer.setText("=" +ans);
         }
 
     }
