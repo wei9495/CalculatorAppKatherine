@@ -40,9 +40,9 @@ public class MainActivity extends AppCompatActivity {
         }else{
             EQUATION +="";
         }
-
         TextView update= findViewById(R.id.stringEquation);
         update.setText(EQUATION);
+
     }
 
     public void multiply(View V){
@@ -110,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
     public void stringOn1(View V){
         EQUATION += 1 + "";
         TextView update= findViewById(R.id.stringEquation);
@@ -159,7 +160,6 @@ public class MainActivity extends AppCompatActivity {
         EQUATION += 9 + "";
         TextView update= findViewById(R.id.stringEquation);
         update.setText(EQUATION);
-        equals(V);
     }
     public void stringOn0(View V){
         EQUATION += 0 + "";
@@ -181,19 +181,11 @@ public class MainActivity extends AppCompatActivity {
             operation = EQUATION.indexOf("+");
             String firstNum = EQUATION.substring(0,operation);
             String secondNum = EQUATION.substring(operation+1);
-<<<<<<< HEAD
             first = Integer.parseInt(firstNum.toString());
             second = Integer.parseInt(secondNum.toString());
             ans = first + second;
             TextView answer= findViewById(R.id.answer);
             answer.setText("=" +ans);
-=======
-            int first = Integer.parseInt(firstNum);
-            int second = Integer.parseInt(secondNum);
-            int ans = first + second;
-            TextView answer= findViewById(R.id.answer);
-            answer.setText(ans + "");
->>>>>>> 029939066807067df40230b3b08a7bde4e0de1ee
         }
         if(EQUATION.indexOf("-")>-1){
             operation = EQUATION.indexOf("-");
@@ -221,10 +213,10 @@ public class MainActivity extends AppCompatActivity {
             String secondNum = EQUATION.substring(operation+1);
             first = Integer.parseInt(firstNum.toString());
             second = Integer.parseInt(secondNum.toString());
-            ans = first/second;
+            ans = first / second;
             TextView answer= findViewById(R.id.answer);
             answer.setText("=" +ans);
         }
-
+        EQUATION = "";
     }
 }
